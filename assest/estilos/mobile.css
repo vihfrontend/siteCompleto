@@ -12,6 +12,10 @@ img{
     width: 100%;
 }
 
+body{
+    width: 100%;
+    background-color: rgb(33, 73, 105);
+}
 .container-top{
     width: 100%;
     display: flex;
