@@ -14,7 +14,6 @@ img{
 
 body{
     width: 100%;
-    background-color: rgb(33, 73, 105);
 }
 .container-top{
     width: 100%;
@@ -30,8 +29,8 @@ body{
 .container-top .logo a{
     font-size: clamp(1.2em,8vw,1.8em);
     text-decoration: none;
-    text-transform: uppercase;
     color: darkgray;
+    text-transform: capitalize;
 }
 .container-top .menu-container{
     display: flex;
@@ -83,6 +82,7 @@ body{
     overflow: hidden;
     transition: all .3s ease-in;
     border-radius: 12px;
+    height: 420px;
 }
 .content-father .container-tips .card-tips::after{
     content: "";
@@ -103,22 +103,28 @@ body{
    transition: all .5s ease-in-out;
    height: 100%;
    width: 100%;
+   object-fit: cover;
 }
 .content-father .container-tips .card-tips .contents-texts{
     position: absolute;
     bottom: 0;
-    margin: 0 0 0 20px;
+    margin: 0 0 12px 20px;
     z-index: 2;
 }
 .content-father .container-tips .card-tips .contents-texts h2{
     display: inline;
     background-color: white;
-    padding: .30em .45em ;
+    padding: .40em .95em ;
     text-transform: uppercase;
     color: rgb(136, 136, 136);
     font-size: .90em;
     border-radius: 5px;
     font-weight: 500;
+}
+.content-father .container-tips .card-tips .contents-texts h2 > a{
+   text-decoration: none;
+    color: rgb(124, 124, 124);
+    font-weight: 600;
 }
 .content-father .container-tips .card-tips .contents-texts p{
     text-transform: uppercase;
