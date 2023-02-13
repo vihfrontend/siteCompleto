@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope',Arial, Helvetica, sans-serif;
+}
+img{
+    width: 100%;
+}
+
+.container-top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 18vh;
+    position: relative;
+}
+.container-top .logo{
+    margin: 0 0 0 35px;
+}
+.container-top .logo a{
+    font-size: clamp(1.2em,8vw,1.8em);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: darkgray;
+}
+.container-top .menu-container{
+    display: flex;
+    margin: 0 30px 0 0;
+}
+.container-top .menu-container .carts li{
+    font-size: clamp(1.2em,4vw,1.4em);
+    list-style: none;
+}
+.container-top .menu-container .login-user li{
+    font-size: clamp(1.2em,4vw,1.4em);
+    list-style: none;
+}
+.container-top .menu-container .list-menu{
+    position: absolute;
+    left: 0;
+    top: 15vh;
+    background-color: white;
+    right: 0;
+    list-style: none;
+    opacity: 0;
+}
+.container-top .menu-container .list-menu li{
+    padding: 1.4em 0;
+    font-size: clamp(1.4em,8vw,.80em);
+    text-transform: capitalize;
+}
+.container-top .menu-container .list-menu  li a{
+    text-decoration: none;
+    color: #0e0e0e;
+}
+.container-top .menu-container .list-menu li > ul{
+    display: none;
+}
+/* cards .>> */
+
+
+.content-father{
+    width: 100%;
+}
+
+.content-father .container-tips{
+    width: 100%;
+    padding: 0 30px;
+    border-radius: 10px;
+}
+.content-father .container-tips .card-tips{
+    position: relative;
+    overflow: hidden;
+    transition: all .3s ease-in;
+    border-radius: 12px;
+}
+.content-father .container-tips .card-tips::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #0e0e0e73;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.content-father .container-tips .card-tips:hover .notbook{
+   transform: scale(1.2);
+}
+.content-father .container-tips .card-tips .notbook{
+   transition: all .5s ease-in-out;
+   height: 100%;
+   width: 100%;
+}
+.content-father .container-tips .card-tips .contents-texts{
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 0 20px;
+    z-index: 2;
+}
+.content-father .container-tips .card-tips .contents-texts h2{
+    display: inline;
+    background-color: white;
+    padding: .30em .45em ;
+    text-transform: uppercase;
+    color: rgb(136, 136, 136);
+    font-size: .90em;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.content-father .container-tips .card-tips .contents-texts p{
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 1.10em;
+    border-radius: 5px;
+    margin-top: 12px;
+    font-weight: 600;
+}
+.content-father .container-tips .card-tips .contents-texts .post-perfil .man-post img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+.content-father .container-tips .card-tips .contents-texts .post-perfil{
+    display: flex;
+    color: rgb(255, 255, 255);
+    gap: 12px;
+    margin: 8px 0;
+    align-items: center;
+}
+.content-father .container-tips .card-tips .contents-texts .post-perfil .time-container{
+    display: flex;
+    color: rgb(255, 255, 255);
+    gap: 12px;
+    margin: 20px 0;
+    align-items: center;
+
+}
+.content-father .container-tips .card-tips .contents-texts .post-perfil .time-container img{
+    width: 30px;
+}
+.content-father .container-tips .card-tips .contents-texts .post-perfil .man-post{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
