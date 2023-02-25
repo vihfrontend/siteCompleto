@@ -57,6 +57,7 @@ body{
     max-width: 50px;
     cursor: pointer;
 }
+
 .container-top .menu-container .list-menu{
     position: absolute;
     left: 0;
@@ -65,18 +66,72 @@ body{
     right: 0;
     list-style: none;
     opacity: 0;
+    z-index: 3;
+    padding: 0 0 0 40px;
+}
+.container-top .menu-container .burguer:hover ~ .list-menu{
+    opacity: 1;
 }
 .container-top .menu-container .list-menu li{
-    padding: 1.4em 0;
-    font-size: clamp(1.4em,8vw,.80em);
+    padding: .60em 0;
+    font-size: clamp(.70em,8vw,.80em);
     text-transform: capitalize;
+    text-transform: uppercase;
 }
 .container-top .menu-container .list-menu  li a{
     text-decoration: none;
     color: #0e0e0e;
 }
-.container-top .menu-container .list-menu li > ul{
-    display: none;
+.container-top .menu-container .list-menu li > .list-sub-pages{
+    height: 0;
+    overflow: hidden;
+    transition: all .4s ease-in-out;
+}
+.container-top .menu-container .list-menu li:hover > .list-sub-pages{
+    height: 90vh;
+    overflow: initial;
+}
+.container-top .menu-container .list-menu li > .list-sub-pages h2{
+    text-transform: uppercase;
+    font-size: clamp(1.40em,8vw,.80em);
+    font-weight: 500;
+    margin-top: .70em;
+}
+.container-top .menu-container .list-menu li > .list-sub-pages{
+    text-transform: uppercase;
+    font-size: clamp(.70em,8vw,.80em);
+    font-weight:400;
+}
+.container-top .menu-container .list-menu li > .list-sub-pages li{
+    text-transform: uppercase;
+    font-size: clamp(.70em,8vw,.80em);
+    font-weight:400;
+    list-style: none;
+}
+.container-top .menu-container .list-menu li > .list-sub-pages h2:last-child{
+    border-bottom: 1px solid #0e0e0e;
+    display: inline;
+}
+
+.container-top .menu-container .list-menu li > .list-sub-categories{
+    text-transform: uppercase;
+    font-size: clamp(.70em,8vw,.80em);
+    font-weight:400;
+}
+.container-top .menu-container .list-menu li > .list-sub-categories li{
+    text-transform: uppercase;
+    font-size: clamp(.70em,8vw,.80em);
+    font-weight:400;
+    list-style: none;
+}
+.container-top .menu-container .list-menu li > .list-sub-categories{
+    height: 0;
+    overflow: hidden;
+    transition: all .4s ease-in-out;
+}
+.container-top .menu-container .list-menu li:hover > .list-sub-categories{
+    height: 9vh;
+    overflow: initial;
 }
 /* cards .>> */
 
@@ -181,7 +236,7 @@ body{
 
 
 .content-father .container-tips-article{
-    background-color: rgba(0, 0, 255, 0);
+    background-color: rgba(175, 175, 211, 0);
     margin-top: 1.2em;
     display: flex;
     flex-direction: column;
@@ -275,6 +330,7 @@ body{
 .content-father .cards-articles{
     background-color: rgb(39, 39, 39);
     width: 100%;
+    margin: 3em 0 0 0;
 }
 .content-father .cards-articles .managen-card{
    padding: 30px;
